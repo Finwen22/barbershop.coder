@@ -1,0 +1,10 @@
+@media (max-width: 340px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        .logo-column,
+        .menu-column {
+        text-align: center;
+        }
+    }
+}

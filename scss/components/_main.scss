@@ -1,0 +1,393 @@
+.hero{
+    text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-image: url(../img/hero.png);
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    h1{
+        color: white;
+        border: white solid 2px;
+        padding: 15px;
+    
+}
+}
+
+.marcas{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    background-color: gray;
+}
+
+.cabeceraProductos{
+    display: flex;
+    font-family: 'Montserrat Alternates', sans-serif;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 15px;
+    .card {
+        margin: 0 16px 32px;
+        background-color: #fff;
+        border: 1px solid #e6e6e6;
+        border-radius: 4px;
+        box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        transition: 2s;
+        &:hover{
+            transform: scale(1.1);
+            background-color: #D7DEDC;}
+            .card-link {
+                display: block;
+                text-decoration: none;
+                color: inherit;
+                .card-img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;}
+                .card-body {
+                    text-align: center;
+                    .card-title {
+                        margin: 0 0 8px;
+                        font-size: 18px;
+                        font-weight: bold;}
+                    .card-price {
+                        margin: 0 0 8px;
+                        font-size: 24px;
+                        font-weight: bold;
+                        color: #333;}
+                    .add-to-cart-btn {
+                        display: inline-block;
+                        background-color: gray;
+                        color: white;
+                        padding: 10px 20px;
+                        border: none;
+                        border-radius: 5px;
+                        margin-top: 10px;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: black;
+                            color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.inauguracion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    
+    iframe{
+        width: 300px;
+        height: 250px;
+    }
+    div{
+        font-family: 'Montserrat Alternates', sans-serif;
+        text-align: center;
+        margin: 50px;
+    }
+}
+
+.profesionales {
+    font-family: 'Montserrat Alternates', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .profesional {
+        flex-basis: 30%;
+        text-align: center;
+        .imagen {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto;
+            transition: 1s;
+            &:hover{
+                transform: scale(1.1);}
+        }
+        h3{
+            margin-top: 10px;
+        }
+        p {
+            margin: 5px 0;
+        }
+    }
+}
+
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "Nav Producto1 Producto2"
+    "Nav Producto3 Producto4"
+    "Nav Producto5 Producto6";
+    margin-top: 10px;
+    .Nav { grid-area: Nav; 
+    .categorias{
+        ul{
+            li{
+                list-style: none;
+            }
+        }
+    .galardones{
+        display: flex;
+        flex-direction: column;
+        img{width: 120px;
+            height: 120px;
+        }
+    }
+    }
+}
+}
+.Producto1 {grid-area: Producto1;
+@extend %card}  
+    
+
+.Producto2 { grid-area: Producto2; 
+    @extend %card;
+    }
+
+
+.Producto3 { grid-area: Producto3; 
+    @extend %card;
+}
+
+.Producto4 { grid-area: Producto4; 
+    @extend %card;
+    }
+
+.Producto5 { grid-area: Producto5; 
+    @extend %card;
+}
+
+.Producto6 { grid-area: Producto6; 
+    @extend %card;
+}
+
+.sucursal{
+    background-color: $color-primario;
+    color: $background-btn;
+    display: flex;
+    text-align: center;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.sucursalInvert{
+    background-color: $color-secundario;
+    color: $background-btn;
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.botonderaizq {
+    background: $color-secundario; 
+    color: black;
+    border: 2px solid #6d4c3d00; 
+    padding: 10px 20px;
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+}
+.botonderaizq:hover {
+    color: #fff;
+}
+.botonderaizq::after {
+    content: "";
+    background: black;
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+}
+.botonderaizq:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+}
+
+.botonizqader {
+    background: $color-primario; 
+    color: $background-btn;
+    border: 2px solid #6d4c3d00;
+    padding: 10px 20px;
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+}
+.botonizqader:hover {
+    color: #EAF0CE;
+}
+.botonizqader::after {
+    content: "";
+    background: black;
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    right: -100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+}
+.botonizqader:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+}
+/*Main--Turnos*/
+.formulario{
+    margin-top: 10px;
+}
+
+.formulario h2{
+    text-align: center;
+}
+.formulario div{
+    display: flex;
+    text-align: center;
+    margin: 10px;
+    align-items: center;
+}
+
+.formulario div select{
+    background-color: $color-primario;
+    color: white;
+    border-radius: 10px;
+}
+
+/*Main--Galeria*/
+
+.containerGaleria {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "galeria1 galeria1 galeria1 Galeria2 Galeria2"
+    "galeria1 galeria1 galeria1 Galeria2 Galeria2"
+    "galeria3 galeria4 galeria5 galeria6 galeria7"
+    "galeria9 galeria9 galeria8 galeria8 galeria8"
+    "galeria9 galeria9 galeria8 galeria8 galeria8";
+}
+
+.galeria1 { grid-area: galeria1;
+    background-image: url(../img/corte7.png);
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Galeria2 { grid-area: Galeria2;
+    background-image: url(../img/corte8.png);
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.galeria3 { grid-area: galeria3;
+    background-image: url(../img/corte1.png);
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.galeria4 { grid-area: galeria4;   
+    background-image: url(../img/corte2.png);
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.galeria5 { grid-area: galeria5;  
+    background-image: url(../img/corte3.png);
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.galeria6 { grid-area: galeria6;
+    background-image: url(../img/corte4.png);
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.galeria7 { grid-area: galeria7;
+    background-image: url(../img/corte5.png);
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.galeria8 { grid-area: galeria8;
+    background-image: url(../img/corte10.png);
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.galeria9 { grid-area: galeria9;
+    background-image: url(../img/corte9.png);
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover; }
+
+
+

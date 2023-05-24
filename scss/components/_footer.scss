@@ -1,0 +1,42 @@
+footer{
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-color: #D7DEDC;
+    padding: 20px;
+    .footer-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        align-items: center;
+        .logo-column{
+            text-align: center;
+            img{
+                margin-bottom: 10px;
+            }
+        }
+        .menu-column{
+            text-align: center;
+            .navigation-menu{
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                li{
+                    display: inline-block;
+                    margin-right: 10px;
+                    a{
+                        text-decoration: none;
+                        color: #333;
+                        &:hover{
+                            text-decoration: underline
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .copyright{
+        background-color: black;
+        color: #FDFFF7;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
