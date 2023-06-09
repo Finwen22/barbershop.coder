@@ -26,6 +26,22 @@
             font-size: 1.5rem;
         }
     }
+    
+    @media screen and (max-width: 1024px) {
+        height: 60vh;
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        height: 50vh;
+
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
 }
 
 .marcas{
@@ -109,10 +125,10 @@
     .action{
         color: white;
         background-color: $color-primario;
+        font-family: 'Montserrat Alternates', sans-serif;
     }
 
 }
-
 
 .profesionales {
     font-family: 'Montserrat Alternates', sans-serif;
@@ -120,9 +136,11 @@
     justify-content: space-between;
     margin-top: 50px;
     margin-bottom: 50px;
+
     .profesional {
         flex-basis: 30%;
         text-align: center;
+
         .imagen {
             width: 150px;
             height: 150px;
@@ -130,19 +148,32 @@
             overflow: hidden;
             margin: 0 auto;
             transition: 1s;
-            &:hover{
-                transform: scale(1.1);}
+
+            &:hover {
+                transform: scale(1.1);
+            }
         }
-        h3{
+
+        h3 {
             margin-top: 10px;
         }
+
         p {
             margin: 5px 0;
         }
     }
-}
+    
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
 
-.container {  display: grid;
+        .profesional {
+            flex-basis: 100%;
+            margin-bottom: 30px;
+        }
+    }
+}
+.container {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 0px 0px;
@@ -152,71 +183,116 @@
     "Nav Producto3 Producto4"
     "Nav Producto5 Producto6";
     margin-top: 10px;
-    .Nav { grid-area: Nav; 
-    .categorias{
-        ul{
-            li{
-                list-style: none;
+
+    .Nav {
+    grid-area: Nav;
+    
+    .categorias {
+        h2{
+            font-family: 'Montserrat Alternates', sans-serif;
+            @media screen and (max-width: 768px){
+                text-align: center;
             }
         }
-    .galardones{
+        ul {
+        li {
+            font-family: 'Montserrat Alternates', sans-serif;
+            list-style: none;
+        }
+        @media screen and (max-width: 768px){
+            text-align: center;
+        }
+        }
+    }
+    
+    .galardones {
         display: flex;
         flex-direction: column;
-        img{width: 120px;
-            height: 120px;
+        @media screen and (max-width: 768px){
+            display: none;
+        }
+        
+        img {
+        width: 120px;
+        height: 120px;
         }
     }
     }
-}
-}
-.Producto1 {grid-area: Producto1;
-    @extend %card}  
-    
 
-.Producto2 { grid-area: Producto2; 
+    .Producto1 {
+    grid-area: Producto1;
     @extend %card;
     }
 
-
-.Producto3 { grid-area: Producto3; 
-    @extend %card;
-}
-
-.Producto4 { grid-area: Producto4; 
+    .Producto2 {
+    grid-area: Producto2;
     @extend %card;
     }
 
-.Producto5 { grid-area: Producto5; 
+    .Producto3 {
+    grid-area: Producto3;
     @extend %card;
-}
+    }
 
-.Producto6 { grid-area: Producto6; 
+    .Producto4 {
+    grid-area: Producto4;
     @extend %card;
-}
+    }
 
-.sucursal{
+    .Producto5 {
+    grid-area: Producto5;
+    @extend %card;
+    }
+
+    .Producto6 {
+    grid-area: Producto6;
+    @extend %card;
+    }
+
+    @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "Nav"
+        "Producto1"
+        "Producto2"
+        "Producto3"
+        "Producto4"
+        "Producto5"
+        "Producto6";
+    }    
+}
+.sucursal {
     background-color: $color-primario;
     color: $background-btn;
     display: flex;
     text-align: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+    flex-direction: column;
+    }
 }
 
-.sucursalInvert{
+.sucursalInvert {
     background-color: $color-secundario;
     color: $background-btn;
     display: flex;
     flex-direction: row-reverse;
     text-align: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+    flex-direction: column;
+    }
 }
 
 .botonderaizq {
-    background: $color-secundario; 
+    background: $color-secundario;
     color: black;
-    border: 2px solid #6d4c3d00; 
+    border: 2px solid #6d4c3d00;
     padding: 10px 20px;
     border-radius: 6px;
     position: relative;
@@ -224,46 +300,45 @@
     overflow: hidden;
     display: inline-block;
     text-decoration: none;
+
+    &:hover {
+    color: #fff;
+    }
+
+    &::after {
+    content: "";
+    background: black;
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+    }
+
+    &:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+    }
+
+    &:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+    }
 }
 
-    .botonderaizq:hover {
-        color: #fff;
-    }
-
-    .botonderaizq::after {
-        content: "";
-        background: black;
-        position: absolute;
-        z-index: -1;
-        padding: 16px 20px;
-        display: block;
-        top: 0;
-        bottom: 0;
-        left: -100%;
-        right: 100%;
-        -webkit-transition: all 0.35s;
-        transition: all 0.35s;
-    }
-
-    .botonderaizq:hover::after {
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        -webkit-transition: all 0.35s;
-        transition: all 0.35s;
-    }
-
-    .botonderaizq:hover::after {
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        -webkit-transition: all 0.35s;
-        transition: all 0.35s;
-    }
-
-/*Main--Turnos*/
 .formulario{
     margin-top: 10px;
     h2{
@@ -281,8 +356,6 @@
         }
     }
 }
-
-/*Main--Galeria*/
 
 .containerGaleria {  display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -366,5 +439,21 @@
     background-repeat: no-repeat;
     background-size: cover; }
 
+    @media (max-width: 768px) {
+        .containerGaleria {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "galeria1"
+            "Galeria2"
+            "galeria3"
+            "galeria4"
+            "galeria5"
+            "galeria6"
+            "galeria7"
+            "galeria8"
+            "galeria9";
+        }
+}
 
 
