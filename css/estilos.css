@@ -48,6 +48,12 @@
           background-color: black;
           color: white; }
 
+header {
+  font-family: 'Montserrat Alternates', sans-serif; }
+  @media screen and (max-width: 768px) {
+    header {
+      text-align: center; } }
+
 header nav div {
   background-color: white; }
 
