@@ -100,6 +100,19 @@
     }
 }
 
+.nuevoLocal{
+    text-align: center;
+    iframe{
+        width: 100%;
+        height: 250px;
+    }
+    .action{
+        color: white;
+        background-color: $color-primario;
+    }
+
+}
+
 
 .profesionales {
     font-family: 'Montserrat Alternates', sans-serif;
@@ -211,9 +224,12 @@
     overflow: hidden;
     display: inline-block;
     text-decoration: none;
-    &.botonderaizq:hover {
+}
+
+    .botonderaizq:hover {
         color: #fff;
     }
+
     .botonderaizq::after {
         content: "";
         background: black;
@@ -228,6 +244,7 @@
         -webkit-transition: all 0.35s;
         transition: all 0.35s;
     }
+
     .botonderaizq:hover::after {
         left: 0;
         right: 0;
@@ -236,6 +253,7 @@
         -webkit-transition: all 0.35s;
         transition: all 0.35s;
     }
+
     .botonderaizq:hover::after {
         left: 0;
         right: 0;
@@ -244,46 +262,6 @@
         -webkit-transition: all 0.35s;
         transition: all 0.35s;
     }
-}
-
-.botonizqader {
-    background: $color-primario; 
-    color: $background-btn;
-    border: 2px solid #6d4c3d00;
-    padding: 10px 20px;
-    border-radius: 6px;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    display: inline-block;
-    text-decoration: none;
-    .botonizqader:hover {
-        color: #EAF0CE;
-}
-    .botonizqader::after {
-    content: "";
-    background: black;
-    position: absolute;
-    z-index: -1;
-    padding: 16px 20px;
-    display: block;
-    top: 0;
-    bottom: 0;
-    left: 100%;
-    right: -100%;
-    -webkit-transition: all 0.35s;
-    transition: all 0.35s;
-}
-    .botonizqader:hover::after {
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    -webkit-transition: all 0.35s;
-    transition: all 0.35s;
-}
-
-}
 
 /*Main--Turnos*/
 .formulario{
