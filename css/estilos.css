@@ -175,7 +175,9 @@ header nav div {
   grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "Nav Producto1 Producto2" "Nav Producto3 Producto4" "Nav Producto5 Producto6";
+  grid-template-areas: "Nav Producto1 Producto2"
+ "Nav Producto3 Producto4"
+ "Nav Producto5 Producto6";
   margin-top: 10px; }
   .container .Nav {
     grid-area: Nav; }
@@ -322,7 +324,11 @@ header nav div {
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "galeria1 galeria1 galeria1 Galeria2 Galeria2" "galeria1 galeria1 galeria1 Galeria2 Galeria2" "galeria3 galeria4 galeria5 galeria6 galeria7" "galeria9 galeria9 galeria8 galeria8 galeria8" "galeria9 galeria9 galeria8 galeria8 galeria8"; }
+  grid-template-areas: "galeria1 galeria1 galeria1 Galeria2 Galeria2"
+ "galeria1 galeria1 galeria1 Galeria2 Galeria2"
+ "galeria3 galeria4 galeria5 galeria6 galeria7"
+ "galeria9 galeria9 galeria8 galeria8 galeria8"
+ "galeria9 galeria9 galeria8 galeria8 galeria8"; }
 
 .galeria1 {
   grid-area: galeria1;
